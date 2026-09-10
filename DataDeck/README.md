@@ -1,16 +1,25 @@
-# DataDeck
-> Abstract Card Architecture & Design Patterns
+# 🃏 DataDeck
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Topic](https://img.shields.io/badge/Topic-Design_Patterns-orange.svg)
+![Topic](https://img.shields.io/badge/Topic-Abstract_Factory-brightgreen.svg)
+
+> **Abstract Card Architecture & Design Patterns**
 
 ## 🎯 Objective
-This project explores advanced Object-Oriented Design Patterns in Python by building a dynamic, modular card game system (inspired by monster-collecting games). The goal is to architect a highly scalable system capable of handling thousands of creature variations, capabilities, and battle strategies without duplicating code or creating rigid class hierarchies.
+This project explores advanced Object-Oriented Design Patterns in Python by building a dynamic, modular card game system. The goal is to architect a highly scalable system capable of handling thousands of creature variations, capabilities, and battle strategies without duplicating code or creating rigid class hierarchies.
 
-## 🧠 Technical Concepts Applied
+---
+
+## 🧠 Core Concepts
 * **Abstract Factory Pattern (`ex0`):** Enforcing a structured creation process for related objects. The `CreatureFactory` ensures that every family (e.g., `FlameFactory`, `AquaFactory`) correctly implements methods to generate both base and evolved creature forms.
 * **Interfaces & Mixins (`ex1`):** Utilizing multiple inheritance to decouple specific abilities (`HealCapability`, `TransformCapability`) from the base `Creature` class. This ensures that capabilities can be applied modularly to any entity.
 * **Strategy Pattern (`ex2`):** Decoupling battle logic from the creatures themselves. By defining a `BattleStrategy` interface, behaviors (`NormalStrategy`, `AggressiveStrategy`, `DefensiveStrategy`) are injected dynamically at runtime, allowing the tournament engine to execute different tactical flows without altering the creature objects.
-* **Static Typing & Casting (`typing.cast`):** Ensuring type safety when invoking specialized interface methods (e.g., `.heal()` or `.transform()`) on abstract base objects, satisfying strict `mypy` requirements.
+* **Static Typing & Casting (`typing.cast`):** Ensuring type safety when invoking specialized interface methods on abstract base objects, satisfying strict `mypy` requirements.
 
-### 📐 Visualizing Architecture (The Strategy Pattern)
+---
+
+## 📐 Architecture: The Strategy Pattern
 In `ex2` (Tournament), the battle logic is entirely decoupled from the creatures. Here is how the Strategy Pattern handles the execution dynamically at runtime:
 
 ```text

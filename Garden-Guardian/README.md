@@ -1,19 +1,25 @@
-# Garden Guardian
-> Data Engineering for Smart Agriculture
+# 🛡️ Garden Guardian
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Topic](https://img.shields.io/badge/Topic-Exception_Handling-red.svg)
+![Topic](https://img.shields.io/badge/Topic-Data_Pipelines-brightgreen.svg)
+
+> **Data Engineering for Smart Agriculture**
 
 ## 🎯 Objective
-
 This project focuses on building resilient data pipelines for smart agriculture by mastering Python's exception handling capabilities. The goal is to gracefully handle sensor failures, validate agricultural data streams, and ensure that the monitoring system continues to run robustly even when unexpected errors occur.
 
-## 🧠 Technical Concepts Applied
+---
 
+## 🧠 Core Concepts
 * **Exception Catching (`try/except`):** Safely intercepting specific built-in errors such as `ValueError`, `ZeroDivisionError`, `FileNotFoundError`, and `TypeError` to prevent abrupt program crashes.
 * **Manual Error Triggering (`raise`):** Validating data bounds (e.g., ensuring temperature readings remain between 0°C and 40°C) and raising explicit exceptions when the data is corrupted or unsafe for plants.
 * **Custom Exception Hierarchies (OOP):** Engineering domain-specific error classes (`GardenError`, `PlantError`, `WaterError`) by utilizing class inheritance from Python's base `Exception` object. This enables structured, polymorphic error catching.
 * **Guaranteed Resource Cleanup (`finally`):** Implementing strict cleanup procedures (such as closing a watering system) that are guaranteed to execute regardless of whether an exception was raised, caught, or if the function returned early.
 
-### 📐 Visualizing Exception Lifecycle (`ex4` Architecture)
+---
 
+## 📐 Architecture: Exception Lifecycle (`ex4`)
 To understand how the pipeline secures resources using the `finally` block, here is a visual representation of the execution flow:
 
 ```text
@@ -35,6 +41,7 @@ To understand how the pipeline secures resources using the `finally` block, here
                                                           │ Close System │
                                                           └──────────────┘
                                                           (ALWAYS EXECUTES)
+                                                          
 ```
 
 ## 🛠️ Usage

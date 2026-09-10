@@ -1,38 +1,37 @@
-# Data Quest
-> Mastering Python Collections & Game Data Engineering
+# 🗺️ Data Quest
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Topic](https://img.shields.io/badge/Topic-Data_Structures-blueviolet.svg)
+![Topic](https://img.shields.io/badge/Topic-Generators-yellow.svg)
+
+> **Mastering Python Collections & Game Data Engineering**
 
 ## 🎯 Objective
-
 This project dives into the heart of data engineering by exploring Python's core data structures within a game analytics context. The goal is to process massive amounts of game data efficiently by choosing the exact right tool for the job—transforming linear time operations into optimized, memory-safe processes.
 
-## 🧠 Technical Concepts Applied
+---
 
-* **Lists & CLI Parsing:** Safely ingesting and cleaning command-line arguments (`sys.argv`), utilizing error handling to discard corrupted inputs and perform statistical math (`sum`, `max`, `min`).
-* **N-Tuples (Immutable Data):** Storing fixed 3D spatial coordinates (X, Y, Z) and applying the Euclidean distance formula (`math.sqrt`) to track player movement.
+## 🧠 Core Concepts
+* **Lists & CLI Parsing:** Safely ingesting and cleaning command-line arguments (`sys.argv`), utilizing error handling to discard corrupted inputs and perform statistical math.
+* **N-Tuples (Immutable Data):** Storing fixed 3D spatial coordinates (X, Y, Z) and applying the Euclidean distance formula to track player movement.
 * **Sets (Unique Elements):** Utilizing mathematical set operations (`union`, `intersection`, `difference`) to analyze, compare, and filter unique player achievements without duplicates.
 * **Associative Arrays (Dictionaries):** Building a dynamic game inventory system using key-value pairs, updating quantities, and calculating percentage distributions.
 * **Lazy Iterators (Generators):** Using the `yield` keyword to create infinite data streams for game events, bypassing massive memory overhead by generating values strictly on-demand.
 * **Comprehensions (Data Alchemy):** Writing highly optimized, single-line list and dictionary comprehensions to filter and transform data elegantly without verbose loop constructs.
 
-### 📐 Visualizing Memory Efficiency (Generators vs. Lists)
+---
 
+## 📐 Architecture: Memory Efficiency (Generators vs. Lists)
 In `ex5` (Stream Wizard), generators are used to handle 1000+ events safely. Here is exactly what happens in the system memory (RAM) under the hood:
 
 ```text
 [ Standard List: Loads entirely into memory ]
+RAM: [ Event 1 | Event 2 | ... | Event 1000000 ] ➔ High Risk of OutOfMemory Error!
 
-RAM: [ Event 1 | Event 2 | ... | Event 1000000 ]
-                              ↓
-                    High memory usage
+[ Generator (yield): Computes strictly on-demand ]
+RAM: [ Event 1 ] ➔ print & discard ➔ [ Event 2 ] ➔ print & discard ➔ Infinite Safety!
 
 
-[ Generator (yield): Computes on-demand ]
-
-RAM: [ Event 1 ] ➔ process & discard
-          ↓
-     [ Event 2 ] ➔ process & discard
-          ↓
-     [ Event 3 ] ➔ ...
 ```
 
 ## 🛠️ Usage

@@ -1,16 +1,25 @@
-# Data Archivist
-> Digital Preservation in the Cyber Archives
+# 🗃️ Data Archivist
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Topic](https://img.shields.io/badge/Topic-File_Systems-orange.svg)
+![Topic](https://img.shields.io/badge/Topic-Context_Managers-brightgreen.svg)
+
+> **Digital Preservation in the Cyber Archives**
 
 ## 🎯 Objective
 This project explores the critical domain of file operations and stream management in Python. The goal is to build robust systems capable of reading, creating, and securing data archives while gracefully handling missing files, permission errors, and resource leaks.
 
-## 🧠 Technical Concepts Applied
+---
+
+## 🧠 Core Concepts
 * **Standard File I/O (`open`, `read`, `write`, `close`):** Accessing and modifying file contents dynamically while intercepting OS-level errors (`FileNotFoundError`, `PermissionError`).
 * **Advanced Stream Management (`sys` module):** Bypassing standard `print()` and `input()` by directly manipulating `sys.stdout`, `sys.stdin`, and `sys.stderr` for precise control over where data and errors flow.
 * **Buffer Flushing (`flush`):** Enforcing immediate data output to terminal or files to ensure absolute data integrity, preventing asynchronous write delays during critical operations.
 * **Context Managers (`with` statement):** Architecting secure data vaults. The `with` keyword acts as a fail-safe, guaranteeing that file descriptors are safely closed and resources are released, even if a fatal exception occurs during the read/write process.
 
-### 📐 Visualizing Vault Security (The `with` Statement)
+---
+
+## 📐 Architecture: Vault Security (`with` Statement)
 In `ex3` (Vault Security), we transition from manual `.close()` calls to Python's Context Managers. Here is how memory and file descriptors are protected under the hood:
 
 ```text
