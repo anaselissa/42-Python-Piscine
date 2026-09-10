@@ -8,7 +8,7 @@ This project marks a fundamental paradigm shift from imperative and object-orien
 * **Anonymous Functions (`lambda`):** Utilizing inline, unnamed functions in conjunction with functional iterators (`map`, `filter`, `sorted`) for rapid, on-the-fly data transformation.
 * **Higher-Order Functions:** Architecting functions that accept other functions as parameters or return them as outputs (e.g., `spell_combiner`, `power_amplifier`) to build modular, composable logic.
 * **Lexical Scoping & Closures:** Leveraging the `nonlocal` keyword to encapsulate and preserve state within nested functions (e.g., `memory_vault`, `mage_counter`), ensuring data persistence while strictly avoiding global scope pollution.
-* **Advanced `functools` Operations:** 
+* **Advanced `functools` Operations:**
   * `reduce`: Aggregating data streams using imported `operator` functions.
   * `partial`: Pre-filling arguments to create specialized function templates.
   * `lru_cache`: Implementing memoization to optimize recursive algorithms (Fibonacci).
@@ -35,3 +35,31 @@ To understand how a Decorator alters execution flow without modifying the underl
   └──────────────────────────┬──────────────────────────┘
                              ▼
              [ Original cast_spell() Logic ]
+```
+
+## 🛠️ Usage
+
+Execute the following scripts to test the functional paradigms isolated in each realm:
+
+```bash
+# Ex0: Lambda Sanctum (Anonymous functions and iterators)
+python3 ex0/lambda_spells.py
+
+# Ex1: Higher Realm (Combining and amplifying functions)
+python3 ex1/higher_magic.py
+
+# Ex2: Memory Depths (State retention using Closures and nonlocal)
+python3 ex2/scope_mysteries.py
+
+# Ex3: Ancient Library (Functools: reduce, partial, lru_cache, singledispatch)
+python3 ex3/functools_artifacts.py
+
+# Ex4: Master's Tower (Custom Decorators and Introspection)
+python3 ex4/decorator_mastery.py
+```
+
+## 👤 Author
+
+- **Anas Alissa**
+
+- **Campus:** 42 Irbid (Common Core Track)
